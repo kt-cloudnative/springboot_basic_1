@@ -1,12 +1,13 @@
 package com.kt.edu.firstproject.api;
 
+import com.kt.edu.firstproject.dto.ArticleForm;
 import com.kt.edu.firstproject.entity.Article;
-import com.kt.edu.firstproject.service.ArticleService;
+import com.kt.edu.firstproject.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,19 +15,8 @@ import java.util.List;
 @RestController
 public class ArticleApiController {
     @Autowired
-    private ArticleService articleService;
+    private ArticleRepository articleRepository;
 
-    // GET
-    @GetMapping("/api/articles")
-    public List<Article> index() {
-        return articleService.index();
-    }
-
-    @GetMapping("/api/articles/{id}")
-    public Article show(@PathVariable Long id) {
-        return articleService.findById(id);
-    }
-    /*
     // POST
     @PostMapping("/api/articles")
     public Article create(@RequestBody ArticleForm dto) {
@@ -65,6 +55,6 @@ public class ArticleApiController {
         // 대상 삭제
         articleRepository.delete(target);
         return ResponseEntity.status(HttpStatus.OK).build();
-    } */
+    } 
 }
 
