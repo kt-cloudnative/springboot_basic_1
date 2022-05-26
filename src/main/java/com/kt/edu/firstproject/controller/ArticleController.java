@@ -62,6 +62,12 @@ public class ArticleController {
         // 3: 뷰 페이지를 설정!
         return "articles/index";
     }
+    
+    /*@GetMapping("/articles")
+    public @ResponseBody ArrayList<Article> index() {
+        return articleRepository.findAll();
+    }*/
+
 
     @GetMapping("/articles/{id}/edit")
     public String edit(@PathVariable Long id, Model model) {
