@@ -1,2 +1,2 @@
-# springboot basic 1
-SpringBoot basic
+# springboot JPA 1
+SpringBoot JPA
