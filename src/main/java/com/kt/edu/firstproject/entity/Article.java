@@ -1,7 +1,6 @@
 package com.kt.edu.firstproject.entity;
 
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
