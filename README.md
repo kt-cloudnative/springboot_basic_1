@@ -1,2 +1,2 @@
-# edu9
-SpringBoot Overview
+# springboot basic 1
+SpringBoot basic
